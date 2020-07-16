@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('app:server');
 var http = require('http');
+const database = require("../db/database");
 
 /**
  * Get port from environment and store in Express.
@@ -80,6 +81,11 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
+//connect to mongodb
+console.log("\n \t Attempting to connect to database...");
+
+//connect to mongodb
+database.connect();
 
 function onListening() {
   var addr = server.address();
