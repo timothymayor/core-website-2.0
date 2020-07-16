@@ -1,10 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const {api} = require('../controller/admin');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { 
-    title: 'Micro API',
+router.get('/dashboard', function(req, res) {
+  res.render('pages/dashboard', {
+    pageName: 'Dashbord',
+    api: api,
      apilist: [{
          name: 'Barry Dick',
          id: 'API234',
@@ -29,8 +31,18 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/login', (req, res, next)=> {
-  res.render('login');
+//Change this to the homepage or index
+router.get('/', (req, res) => {
+  res.render('pages/exampleHomepage', {
+    pageName: 'Home',
+    apis: api
+  })
+});
+
+router.get('/login', (req, res) => {
+  res.render('pages/login', {
+    pageName: 'Login'
+  });
 });
 
 module.exports = router;

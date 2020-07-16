@@ -1,0 +1,167 @@
+<section>
+  <div class="container">
+    <h4 class="mt-5 head-text">Your APIS</h4>
+
+    <div class="row">
+      <% apis.row1.forEach(function(api){ %>
+        <div class="col-md-3 mt-3" >
+          <div class="card">
+            <div class="row">
+              <div class="col-6 col-md-3">
+                <div class="ext-cont">
+                  <div class="img-container-4 text-center ml-3">
+                    <img src="<%= api.img %>" class="img-main" style="top: 10px;" alt="key">
+                   </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="card-body">
+                    <h5 class="card-title header mt-4"><%= api.name %></h5>
+                    <p class="card-text body-text">  <%= api.desc %></p>
+                
+                <div class="mt-3">
+                  <div class="custom-control custom-switch switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches4">
+                    <label class="custom-control-label" for="customSwitches4"><img  class="pb-1" src="img/settings.png" style="height: 25px;"></label>
+                  </div>
+                </div>
+                <div class="content-button mt-5">
+                  <button type="button" class="btn btn-button">
+                    <a href="<%= api.url %>" target="_blank">api Document</a>
+                  </button>
+                  <button type="button" class="btn btn-button"> <a href="<%= api.url %>" target="_blank">api Communication</a></button>
+  
+                </div>
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+  
+        <% }); %>
+  
+    </div>
+    <div class="row">
+      <% apis.row2.forEach(function(api){ %>
+      <div class="col-md-3 mt-3" >
+        <div class="card">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="ext-cont">
+                <div class="img-container-4 text-center ml-3">
+                  <img src="<%= api.img %>" class="img-main" style="top: 10px;" alt="key">
+                 </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="card-body">
+                  <h5 class="card-title header mt-4"><%= api.name %></h5>
+                  <p class="card-text body-text">  <%= api.desc %></p>
+              
+              <div class="mt-3">
+                <div class="custom-control custom-switch switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitches4">
+                  <label class="custom-control-label" for="customSwitches4"><img  class="pb-1" src="img/settings.png" style="height: 25px;"></label>
+                </div>
+              </div>
+              <div class="content-button mt-5">
+                <button type="button" class="btn btn-button">
+                  <a href="<%= api.url %>" target="_blank">api Document</a>
+                </button>
+                <button type="button" class="btn btn-button"> <a href="<%= api.url %>" target="_blank">api Communication</a></button>
+
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <% }); %>
+    </div>
+    <div class="row">
+      <% apis.row3.forEach(function(api){ %>
+      <div class="col-md-3 mt-3" >
+        <div class="card">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <div class="ext-cont">
+                <div class="img-container-4 text-center ml-3">
+                  <img src="<%= api.img %>" class="img-main" style="top: 10px;" alt="key">
+                 </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="card-body">
+                  <h5 class="card-title header mt-4"><%= api.name %></h5>
+                  <p class="card-text body-text">  <%= api.desc %></p>
+              
+              <div class="mt-3">
+                <div class="custom-control custom-switch switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitches4">
+                  <label class="custom-control-label" for="customSwitches4"><img  class="pb-1" src="img/settings.png" style="height: 25px;"></label>
+                </div>
+              </div>
+              <div class="content-button mt-5">
+                <button type="button" class="btn btn-button">
+                  <a href="<%= api.url %>" target="_blank">api Document</a>
+                </button>
+                <button type="button" class="btn btn-button"> <a href="<%= api.url %>" target="_blank">api Communication</a></button>
+
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <% }); %>
+    </div>
+
+  </div>
+    <span class="view">View All</span>
+    <h4 class="mt-5 pt-5 head-text">Available Micro APIS</h4>
+    <div class="row">
+      <div class="col-md-3 mt-3" >
+        <div class="card card-style">
+            <img class="mt-4" src="img/new_cloudinary_logo_square 1.png" alt="">
+           <div class="card-body text-center">
+              <h5 class="card-title heading">Cloudinary API</h5>
+              <p class="card-text par-text">Description about the API</p>
+              <a href="#" class="btn button">Add</a>
+           </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3" >
+        <div class="card card-style">
+            <img class="mt-4" src="img/SG_Twilio_Lockup_Social.png" alt="">
+           <div class="card-body text-center">
+              <h5 class="card-title heading">SendGrid API</h5>
+              <p class="card-text par-text">Description about the API</p>
+              <a href="#" class="btn button">Add</a>
+           </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3" >
+        <div class="card card-style">
+            <img class="mt-4" src="img/flutter_wave 1.png" alt="">
+           <div class="card-body text-center">
+              <h5 class="card-title heading">Flutterwave API</h5>
+              <p class="card-text par-text">Description about the API</p>
+              <a href="#" class="btn button">Add</a>
+           </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3" >
+        <div class="card card-style">
+            <img class="mt-4" src="img/image 1.png" alt="">
+           <div class="card-body text-center">
+              <h5 class="card-title heading">Cloudinary API</h5>
+              <p class="card-text par-text">Description about the API</p>
+              <a href="#" class="btn button">Add</a>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
