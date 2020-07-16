@@ -2,6 +2,29 @@ const Admins = require('../models/admins');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
+
+// List of APIs
+const smsAPI = 'https://sms.microapi.dev/';
+const transAPI = 'https://transaction.microapi.dev/ui/';
+const commentAPI = 'https://comment.microapi.dev';
+const userAPI = 'https://usermanagement.microapi.dev/';
+const notifyAPI = 'https://notification.microapi.dev';
+const emailAPI = 'https://email.microapi.dev/';
+const authAPI = 'https://auth.microapi.dev/api/doc/';
+const compAPI = 'https://complaint.microapi.dev/v1/docs/';
+const storeAPI = 'https://store.microapi.dev/v1/api-docs/';
+
+
+// Admin Dashboard
+exports.admin_get_all = function(req, res, next) {
+    res.render('/index'); //,{ title: '',  layout: 'layouts/detail'});
+       
+    // Admin.find()
+
+};
+
+
+// Admin Login 
 exports.login = (req, res, next) => {
   Admins.findOne({email: req.body.email}).then(
     (admin) => {
