@@ -32,5 +32,10 @@ router.get('/', function(req, res, next) {
 router.get('/login', (req, res, next)=> {
   res.render('login');
 });
-
+router.get('/blog', (req, res, next)=> {
+  res.render('blog');
+});
+router.get('/about', (req, res, next)=> {
+  res.render('about');
+});
 module.exports = router;
