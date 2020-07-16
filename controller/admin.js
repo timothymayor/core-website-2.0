@@ -3,6 +3,18 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 
+// List of APIs
+const smsAPI = 'https://sms.microapi.dev/';
+const transAPI = 'https://transaction.microapi.dev/ui/';
+const commentAPI = 'https://comment.microapi.dev';
+const userAPI = 'https://usermanagement.microapi.dev/';
+const notifyAPI = 'https://notification.microapi.dev';
+const emailAPI = 'https://email.microapi.dev/';
+const authAPI = 'https://auth.microapi.dev/api/doc/';
+const compAPI = 'https://complaint.microapi.dev/v1/docs/';
+const storeAPI = 'https://store.microapi.dev/v1/api-docs/';
+
+
 // Admin Dashboard
 exports.admin_get_all = function(req, res, next) {
     res.render('/index'); //,{ title: '',  layout: 'layouts/detail'});
@@ -10,20 +22,6 @@ exports.admin_get_all = function(req, res, next) {
     // Admin.find()
 
 };
-
-
-
-// List of APIs
-// https://sms.microapi.dev/
-// https://transaction.microapi.dev
-// https://comment.microapi.dev
-// https://usermanagement.microapi.dev/
-// https://notification.microapi.dev
-// https://email.microapi.dev/
-// https://auth.microapi.dev/api/doc/
-// https://complaint.microapi.dev/v1/docs/
-// https://store.microapi.dev/v1/api-docs/
-// https://transaction.microapi.dev/ui/
 
 
 // Admin Login 
