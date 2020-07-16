@@ -96,12 +96,12 @@ exports.login = (req, res) => {
             response: "success"
           })
         }
-      })
+      });
     }else {
       res.json({
-            message: "Incorect Email",
-            response: "error"
-          })
+          message: "Incorect Email",
+          response: "error"
+      });
     }
   }).catch(err => {
     res.json({
