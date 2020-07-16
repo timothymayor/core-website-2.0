@@ -11,8 +11,10 @@
     "chalk": "^4.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
     "inquirer": "^7.3.2",
     "jsonwebtoken": "^8.5.1",
@@ -21,6 +23,7 @@
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "validator": "^13.1.1"
   }
 }
