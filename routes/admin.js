@@ -6,6 +6,6 @@ const adminCrl = require('../controller/admin');
 router.post('/login', adminCrl.login);
 
 //Handle incoming GET requests to /admin
-router.get("/admin", adminCrl.admin_get_all);
+// router.get("/admin", adminCrl.admin_get_all);
 
 module.exports= router;
