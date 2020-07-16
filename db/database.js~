@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const config = require('../config.js');
-const {seedAdmin} = require('../seed');
+const {seedAdmin} = require('../seed')
 
 const {
   MONGO_USERNAME,
