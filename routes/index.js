@@ -62,5 +62,15 @@ router.get('/login', (req, res) => {
     pageName: 'Login'
   });
 });
+router.get('/blog', (req, res) => {
+  res.render('pages/blog', {
+    pageName: 'blog'
+  });
+});
+router.get('/about', (req, res) => {
+  res.render('pages/about', {
+    pageName: 'about'
+  });
+});
 
 module.exports = router;
