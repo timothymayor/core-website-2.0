@@ -1,5 +1,5 @@
 const Admins = require('../models/admins');
-const jwt = require('jsonwebtoken');
+const { isEmpty, isEmail } = require('validator');
 const bcrypt = require('bcryptjs');
 
 exports.api = {
@@ -64,44 +64,49 @@ row3: [
 };
 
 // Admin Login 
-exports.login = (req, res, next) => {
-  Admins.findOne({email: req.body.email}).then(
-    (admin) => {
-      if (!admin) {
-        return res.status(401).json({
-          error: new Error("Admin not found!")
-        });
-      }
-      bcrypt.compare(req.body.password, admin.password).then(
-        (valid) => {
-          if (!valid) {
-            return res.status(401).json({
-              error: new Error('Incorrect password!')
-            });
-          }
-          const token = jwt.sign(
-            {adminId: admin._id},
-            process.env.RANDOM_TOKEN_SECRET,
-            {expiresIn: '24h'},
-          );
-          res.status(201).json({
-            adminId: admin._id,
-            token: token
-          });
+exports.login = (req, res) => {
+  const { email, password } = req.body;
+
+  if (isEmpty(email) || isEmpty(password)) {
+    return res.json({
+      message: "All fields are required",
+      response: "error"
+    });
+  }
+   if (!isEmail(email)) {
+    return res.json({
+      message: "Please enter a vailid email",
+      response: "error"
+    });
+  }
+
+  Admins.findOne({ email: email }).then(admin => {
+    if (admin) {
+      bcrypt.compare(password, admin.password, (err, result) => {
+        if(!result) {
+          res.json({
+            message: "Incorect Password",
+            response: "error"
+          })
+        }else {
+          req.session.auth = true;
+          req.session.email = admin.email;
+          res.json({
+            message: "Logged in",
+            response: "success"
+          })
         }
-      ). catch(
-        (error) => {
-          res.status(500).json({
-            error: error
-          });
-        }
-      );
-    }
-  ).catch(
-    (error) => {
-      res.status(500).json({
-        error: eror
+      });
+    }else {
+      res.json({
+          message: "Incorect Email",
+          response: "error"
       });
     }
-  );
+  }).catch(err => {
+    res.json({
+      message: "Unable to login",
+      response: "error"
+    })
+  })
 }
