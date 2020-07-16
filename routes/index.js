@@ -2,11 +2,18 @@ const express = require('express');
 const router = express.Router();
 const {api} = require('../controller/admin');
 
+
+let homedatas = []
+for (let data in api) {
+  homedatas.push(...api[data]);
+}
+
+
 /* GET home page. */
 router.get('/dashboard', function(req, res) {
   res.render('pages/dashboard', {
     pageName: 'Dashbord',
-    api: api,
+    apis: api,
      apilist: [{
          name: 'Barry Dick',
          id: 'API234',
@@ -32,16 +39,37 @@ router.get('/dashboard', function(req, res) {
 });
 
 //Change this to the homepage or index
+// router.get('/', (req, res) => {
+//   res.render('pages/exampleHomepage', {
+//     pageName: 'Home',
+//     apis: api.datas
+//   })
+// });
+
+
 router.get('/', (req, res) => {
-  res.render('pages/exampleHomepage', {
+  res.render('pages/index', {
     pageName: 'Home',
-    apis: api
+    apis: homedatas
   })
 });
 
+
+
+// console.log(api);
 router.get('/login', (req, res) => {
   res.render('pages/login', {
     pageName: 'Login'
+  });
+});
+router.get('/blog', (req, res) => {
+  res.render('pages/blog', {
+    pageName: 'blog'
+  });
+});
+router.get('/about', (req, res) => {
+  res.render('pages/about', {
+    pageName: 'about'
   });
 });
 
