@@ -1,6 +1,7 @@
 const Admins = require('../models/admins');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const fetch = require('node-fetch');
 
 
 // List of APIs
