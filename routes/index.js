@@ -44,10 +44,15 @@ router.get('/login', (req, res) => {
     pageName: 'Login'
   });
 });
-router.get('/blog', (req, res, next)=> {
-  res.render('blog');
+router.get('/blog', (req, res) => {
+  res.render('pages/blog', {
+    pageName: 'blog'
+  });
 });
-router.get('/about', (req, res, next)=> {
-  res.render('about');
+router.get('/about', (req, res) => {
+  res.render('pages/about', {
+    pageName: 'about'
+  });
 });
+
 module.exports = router;
