@@ -74,41 +74,48 @@ row3: [
 
 // Admin Login 
 exports.login = (req, res) => {
+  const { email, password } = req.body;
 
-    const { email, password } = req.body;
-    if(isEmpty(email) || isEmpty(password)) {
-        req.flash('error', 'All fields are required');
-        res.redirect('/login');
-    }
-    if(!isEmail(email)) {
-        req.flash('error', 'Please enter a valid email');
-        res.redirect('/login');
-    }
-    
-    Admins.findOne({ email }).then(admin => {
-        if(!admin) {
-            req.flash('error', 'Email does not exist in our record');
-            res.redirect('/login');
-        }else{
-            bcrypt.compare(password, admin.password, (err, result) => {
-                if(result) {
-                    req.session.auth = true;
-                    req.session.email = admin.email;
-                    req.flash('success', 'Welcome back, You\'re logged in');
-                    res.redirect('/login');
-                }else {
-                    req.flash('error', 'Invalid Password');
-                    res.redirect('/login');
-                }
-            })
+  if (isEmpty(email) || isEmpty(password)) {
+    return res.json({
+      message: "All fields are required",
+      response: "error"
+    });
+  }
+   if (!isEmail(email)) {
+    return res.json({
+      message: "Please enter a vailid email",
+      response: "error"
+    });
+  }
+
+  Admins.findOne({ email: email }).then(admin => {
+    if (admin) {
+      bcrypt.compare(password, admin.password, (err, result) => {
+        if(!result) {
+          res.json({
+            message: "Incorect Password",
+            response: "error"
+          })
+        }else {
+          req.session.auth = true;
+          req.session.email = admin.email;
+          res.json({
+            message: "Logged in",
+            response: "success"
+          })
         }
-    }).catch(err => {
-        res.json("Errr")
+      });
+    }else {
+      res.json({
+          message: "Incorect Email",
+          response: "error"
+      });
+    }
+  }).catch(err => {
+    res.json({
+      message: "Unable to login",
+      response: "error"
     })
-}
-
-exports.logout = (req, res) => {
-    req.session.auth = false;
-    req.session.email = null;
-    res.redirect('/');
+  })
 }
