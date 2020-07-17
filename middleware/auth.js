@@ -11,4 +11,4 @@ module.exports = (req, res, next) => {
       error: new Error('Invalid request!')
     });
   }
-};
+}

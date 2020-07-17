@@ -23,10 +23,11 @@ p {
 /* Header */
 .nav-bg {
     background: var(--main-font-color);
+    opacity: 1;
 }
 
 .navbar {
-    padding: .8rem !important;
+    /* padding: .8rem !important; */
     text-align: center;
 }
 
@@ -130,7 +131,7 @@ ul {
 
 @media all and (min-width: 1200px) {
     .navbar-brand {
-        margin-left: 120px !important;
+        /* margin-left: 120px !important; */
     }
 /* 
     .signup-footer img {
