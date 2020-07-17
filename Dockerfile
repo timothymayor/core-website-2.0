@@ -1,5 +1,6 @@
 # Pull latest node image from docker
-FROM node:latest
+# FROM node:latest
+FROM node:12.x
 
 LABEL maintainer='timothymayor24@gmail.com'
 
