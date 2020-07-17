@@ -128,7 +128,7 @@ yarn.lock
 
 # Local History for Visual Studio Code
 .history/
-
+*~
 #package-lock.json
 
 tmp/
