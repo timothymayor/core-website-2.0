@@ -5,11 +5,32 @@
     --main-font-color: #010216;
 }
 
+#add-apis {
+    color: #ffffff;
+    background-color: #58BF8E;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    border: none;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#add-apis a:hover {
+    color: #ffffff;
+
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     background: #F5F7F6;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .container-fluid {
@@ -43,6 +64,15 @@ ul {
 
  a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+
+.abnormal a:hover {
+    color: #58BF8E!important;
+    /* border-bottom: 2px solid #58BF8E; */
+    /* padding-bottom: 0.5rem; */
+    transition: .3s ease-in-out;
 }
 
 .nav-link {

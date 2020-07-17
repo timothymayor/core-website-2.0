@@ -34,12 +34,6 @@ a:link{
   text-decoration: none;
 }
 
-li a:hover {
-  /* color: #ffffff; */
-  border-bottom: 2px solid #58BF8E;
-  padding-bottom: 0.5rem;
-  transition: .3s ease-in-out;
-}
 
 .burger {
   display: none;
@@ -113,7 +107,11 @@ z-index: -1 !important;
     font-size: 16px;
     line-height: 24px;
 }
+.btn-primary{
+    background-color:#57bd8d;
+    border-color:#57bd8d
 
+}
 .signup label {
     margin-bottom: 0;
 }
@@ -144,8 +142,8 @@ z-index: -1 !important;
 .form {
     max-width: 690px;
 }
-#sidewidget{
-  margin-top: 4.5em;}
+/* #sidewidget{
+  margin-top: 4.5em;} */
 /* Footer */
 footer {
     background: var(--main-page-color);

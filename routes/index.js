@@ -40,7 +40,7 @@ router.get('/dashboard', auth, function(req, res) {
 });
 
 //Change this to the homepage or index
-router.get('/register-api', auth, (req, res) => {
+router.get('/register-api', (req, res) => {
 
   res.render('pages/addapi', {
     pageName: 'API Form'
@@ -72,6 +72,11 @@ router.get('/login', (req, res) => {
 router.get('/blog', (req, res) => {
   res.render('pages/blog', {
     pageName: 'blog'
+  });
+});
+router.get('/contact', (req, res) => {
+  res.render('pages/contact', {
+    pageName: 'contact'
   });
 });
 router.get('/about', (req, res) => {
