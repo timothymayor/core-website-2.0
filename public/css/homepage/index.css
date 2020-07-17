@@ -125,15 +125,7 @@ header {
   /* margin-left: 2rem; */
 }
 
-.navbar li a, .btn-link {
-  color: #ffffff;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.2em;
-  line-height: 50px;
-  text-decoration: none;
-}
+
 
 .btn-link:hover {
   color: #58BF8E;
