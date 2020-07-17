@@ -3,7 +3,7 @@ version: '3.7'
 services:
   microservice:
     # image: node:latest
-    image: node:12.x
+    image: node:12.18.2
     volumes:
       - nodemodules:/usr/src/service/node_modules
       - .:/usr/src/service
