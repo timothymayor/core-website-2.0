@@ -423,7 +423,7 @@
                        </tr>
                      </thead>
                      <tbody>
-                       <% apilist.forEach(list => { %>
+                       <% apis.row2.forEach(list => { %>
 
                        <tr>
                          <td>
@@ -440,9 +440,10 @@
                          </td>
                          <td>
 
-                           <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light">
+                           <a href="<%= list.url %> " class="btn btn-sm btn-rounded waves-effect waves-light"
+                             style="background-color: #2a3042; color: #E5E5E5;">
                              View Details
-                           </button>
+                           </a>
                          </td>
                        </tr>
 
