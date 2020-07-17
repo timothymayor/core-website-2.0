@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
@@ -139,7 +138,6 @@ tmp/
 .env
 .env.example
 
-=======
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
@@ -276,4 +274,3 @@ yarn.lock
 tmp/
 .DS_Store
 *~
->>>>>>> d26fd8f6e62cc51032d242105db78d629209640f
