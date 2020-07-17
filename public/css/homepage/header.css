@@ -34,7 +34,9 @@ p {
 .navbar-toggler {
     background: var(--main-page-color);
 }
-
+.navbar-collapse {
+    z-index:20 !important;
+}
 ul {
     list-style: none;
 }
@@ -46,7 +48,15 @@ ul {
 .nav-link {
     color: var(--main-page-color) !important;
 }
-
+.navbar li a, .btn-link {
+  color: #ffffff;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 50px;
+  text-decoration: none;
+}
 /* Form */
 .heading {
     margin-top: 46px;
@@ -126,6 +136,7 @@ ul {
     .abnormal {
         flex-grow: 3;
         text-align: right;
+        padding-left:1em;
     }
 }
 
