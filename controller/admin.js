@@ -7,7 +7,7 @@ exports.api = {
   url:'https://sms.microapi.dev/',
   desc: 'All you need to do is have a senderID or userID. Once supplied, it would be used to identify all transactions done by you.',
   img: 'img/sms.png',
-  status: "verified",
+  status: "pending",
   id: "API234"
 },
 {
@@ -23,7 +23,7 @@ exports.api = {
   url: 'https://comment.microapi.dev',
   desc: 'Access to built-in functionalities for when they want to implement comments and replies within their own application.',
   img: 'img/comment.png',
-  status: "unverified",
+  status: "pending",
   id: "API224"
 },
 {
@@ -41,7 +41,7 @@ row2: [
     url: 'https://notification.microapi.dev',
     desc: 'This API allows you to send out notifications',
     img: 'img/bell.png',
-    status: "unverified",
+    status: "fail",
     id: "API204"
   },
   {
@@ -65,7 +65,7 @@ row2: [
     url: 'https://complaint.microapi.dev/v1/docs/',
     desc: 'A micro-service for managing complaints.',
     img: 'img/complain.png',
-    status: "unverified",
+    status: "pending",
     id: "API2340"
   },
 ],

@@ -1,6 +1,13 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -93,8 +100,13 @@ a:visited {
   color: #449342;
 }
 
-.api-status.unverified {
-  color: #b12828;
+.api-status.pending {
+  color: #f1a52a;
+}
+
+
+.api-status.fail {
+  color: #f12a2a;
 }
 
 .card {
@@ -113,9 +125,23 @@ a:visited {
   height: 20px;
   background-color: #2a3042;
   position: relative;
-  margin-top: 60%;
+  /* margin: -10px -20px 0; */
+  margin-top: -50px;
 
 }
+
+@media all and (min-width: 768px) {
+  .carousel-control-prev{
+    margin-left: -100px;
+  }
+  
+  .carousel-control-next {
+    margin-right: -80px;
+  }
+ 
+}
+
+
 
 .slide-icon::after {
   content: "";
