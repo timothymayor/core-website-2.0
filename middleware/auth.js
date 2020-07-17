@@ -1,7 +1,8 @@
 module.exports = (req, res, next) => {
   try {
     if (!req.session.auth) {
-      throw 'Unauthorized request!';
+      req.flash('error', 'Login to continue')
+      res.redirect('/login');
     }else {
       next()
     }

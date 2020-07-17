@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    
+
 <!-- Mirrored from themesbrand.com/skote/layouts/vertical/auth-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2020 21:57:31 GMT -->
 <head>
     <%- include('../templates/head') %>
@@ -15,7 +15,7 @@
             <img src="images/logo.png" alt="nav-logo" class="img-fluid">
             </div> -->
         <div class="home-btn d-none d-sm-block">
-            <a href="/home" class="text-dark"><i class="fas fa-home h2"></i></a>
+            <a href="/" class="text-dark"><i class="fas fa-home h2"></i></a>
         </div>
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
@@ -35,7 +35,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body pt-0"> 
+                            <div class="card-body pt-0">
                                 <div>
                                     <a href="index.html">
                                         <div class="avatar-md profile-user-wid mb-4">
@@ -46,36 +46,39 @@
                                     </a>
                                 </div>
                                 <div class="p-2">
-                                    <form class="form-horizontal" action="https://themesbrand.com/skote/layouts/vertical/index.html">
-        
+                                    <form class="form-horizontal" method="POST" action="/api/v1/auth/login">
+                                        <% if(messages.error){ %>
+                                            <div class="alert alert-danger">
+                                                <%- messages.error %>
+                                            </div>
+                                        <% } %>
+                                        <% if(messages.success){ %>
+                                            <div class="alert alert-success">
+                                                <%- messages.success %>
+                                            </div>
+                                        <% } %>
                                         <div class="form-group">
-                                            <label for="username">Username</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter username" required>
                                         </div>
-                
+
                                         <div class="form-group">
-                                            <label for="userpassword">Password</label>
-                                            <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
                                         </div>
-                
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Remember me</label>
-                                        </div>
-                                        
                                         <div class="mt-3">
                                             <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
                                         </div>
-                                       
+
                                     </form>
                                 </div>
-            
+
                             </div>
                         </div>
                         <div class="mt-5 text-center">
-                            
+
                             <div>
-                                
+
                                 <p>© 2020 MicroApi. Crafted with <i class="mdi mdi-heart text-danger"></i> Team MicroApi</p>
                             </div>
                         </div>
