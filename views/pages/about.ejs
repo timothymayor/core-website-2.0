@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/homepage/layers.png" type="image/x-icon" />
+    <title>About Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Page css -->
+    <link rel="stylesheet" href="./css/homepage/responsive.css" />
+    <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="./css/homepage/header.css" />
+    <link rel="stylesheet" href="./css/homepage/footer.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+     <!-- include header.ejs -->
+    <%- include('../templates/header')-%>
+    </header>
+
+    <section class="head-back">
+        <div class="head">
+            <p class="head_title">An Intelligent Platform</p>
+            <p class="head_text">Connecting the dot in Communication</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="we_are">
+            <p class="title">Who Are We</p>
+            <p class="we_are_sub">We are the Future</p>
+            <p class="we_are_text">The microservice architecture enables the rapid, frequent and reliable delivery of large, complex applications. It also enables an organization to evolve its technology stack.Microservices - also known as the microservice architecture - is
+                an architectural style that structures an application as a collection of services</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="shift green">
+            <div class="num-row">
+                <p class="num_title">150M+</p>
+                <p class="num_text">Subscibers</p>
+            </div>
+            <div class="num-row">
+                <p class="num_title">25K</p>
+                <p class="num_text">Community</p>
+            </div>
+            <div class="num-row">
+                <p class="num_title">120+</p>
+                <p class="num_text">Corporate Clients</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="title">Our Story</p>
+        <div class="shift">
+            <div class="story-row">
+                <img class="a1" src="images/arror.png" alt="">
+                <p class="story_text">HNG 2020 Interns<br> Conceived the Idea in<br> June 2020</p>
+            </div>
+            <div class="story-row">
+                <img class="a2" src="images/arror2.png" alt="">
+                <p class="story_text">Structuring of the Company’s<br> framework by Developers<br> June 2020 </p>
+            </div>
+            <div class="story-row">
+                <img class="a3" src="images/arror2.png" alt="">
+                <p class="story_text">Commisioning of<br> the Website<br> July 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="title">Our Core Values</p>
+        <div class="shift">
+            <div class="story-row">
+                <p class="value_title">Innovation</p>
+                <img class="value_img b1" src="images/innovation.png" alt="">
+                <p class="value_text">We explore new paths to<br> ensure you have a Creative<br> product</p>
+            </div>
+            <div class="story-row">
+                <p class="value_title">Efficiency</p>
+                <img class="value_img b3" src="images/efficiency.png" alt="">
+                <p class="value_text">Efficieny is our watch word.<br> We work towards a product<br> that gives you the best reult</p>
+            </div>
+            <div class="story-row">
+                <p class="value_title">Reliability</p>
+                <img class="value_img b2" src="images/reliability.png" alt="">
+                <p class="value_text">Our products are credible<br> andreliabke. We apply tested<br> processes for the desired yield</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="title">Meet Our Leadership</p>
+        <div class="shift">
+            <div class="lead-row">
+                <img class="story_img" src="images/mark.png" alt="">
+                <p class="lead_text">Mark Essien </p>
+                <p class="sub-text">CEO</p>
+            </div>
+            <div class="lead-row">
+                <img class="story_img" src="images/neo.png" alt="">
+                <p class="lead_text">Neo Ighodaro</p>
+                <p class="sub-text">Vice President</p>
+            </div>
+            <div class="lead-row">
+                <img class="story_img" src="images/segun.png" alt="">
+                <p class="lead_text">Akinnibosun Segun</p>
+                <p class="sub-text">Vice President</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="title">Our Investors</p>
+        <div class="shift">
+            <div class="lead-row">
+                <img class="story_img" src="images/corporate.png" alt="">
+            </div>
+            <div class="lead-row">
+                <img class="story_img" src="images/partner.png" alt="">
+            </div>
+            <div class="lead-row">
+                <img class="story_img" src="images/smallcorporate.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-------------------------------------FOOTER------------------------------------->
+
+    <footer>
+          <!-- include footer.ejs -->
+          <%- include('../templates/footer')-%>
+    </footer>
+<!-------------------------------------FOOTER------------------------------------->
+
+
+    <!-- Script start -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Script end -->
+</body>
+
+</html>
