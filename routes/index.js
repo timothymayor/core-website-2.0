@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const auth = require("../middleware/auth");
-const {api} = require('../controller/admin');
+const {api} = require('../data/api');
 
 
 let homedatas = []
