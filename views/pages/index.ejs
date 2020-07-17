@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MicroApi</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="./images/homepage/layers.png" type="image/x-icon" />
+
+    <!-- google font  -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/homepage/responsive.css" />
+    <link rel="stylesheet" href="./css/homepage/index.css" />
+    <link rel="stylesheet" href="./css/homepage/header.css" />
+    <link rel="stylesheet" href="./css/homepage/footer.css" />
+</head>
+
+<body>
+    <header>
+        <!-- include header.ejs -->
+        <%- include('../templates/header')-%>
+    </header>
+
+    <article>
+
+        <!-- first section -->
+        <section class="first__section w-100 h-100 container">
+            <div class="inner__first-section">
+                <div class="row">
+                    <div class="first__section-content col-lg-6 mb-5 float-left">
+                        <h1 class="leading__text mb-4">
+                            Open Source APIs for individuals and Enterprises.
+                        </h1>
+                        <p class="supportn__text">
+                            We make it easy for you or your co-operation to build and
+                            organize your database seemlessly at speeds you could only dream
+                            about
+                        </p>
+                        <div class="content__button d-flex mt-3">
+                            <button class="btn btn-content mr-4" type="button">
+                                Get Started
+                            </button>
+                            <a class="content__link" type="button">Explore APIs <img src="./images/homepage/Vector 1.png"
+                                    alt="" /></a>
+                        </div>
+                    </div>
+
+                    <div class="first__section-img col-lg-6 float-right">
+                        <img src="./images/homepage/header illustratn 1.png" alt="header illustration" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="">
+            <!-- <section class="second__section w-100 h-100">
+                <h1 class="text-center vert-text">
+                    You just found the best Open sourced Microservice
+                </h1>
+                <p class="supportn__text text-center mt-3">
+                    MicroAPi is a library of microservice APIs, built and organized for
+                    your software team to get that project running
+                </p>
+            </section> -->
+
+            <section class="third__section h-100">
+                <div class="inner__third-section">
+                    <h2 class="text-center vert-text"><b>Why MicroApi?</b></h2>
+
+                    <section class="third__section-content">
+                        <div class="row">
+                            <!-- <div class="third-content col-lg-5 mb-5"> -->
+                                <div class="third-content col-lg-4 col-md-4 col-sm-8 mb-5">
+                                    <h5 class="text__md mb-4"><b>Access</b></h5>
+                                    <p class="text__sm">
+                                        Enjoy free & unlimited access to our library. Create
+                                        personalized list of your favorite resource.
+                                    </p>
+                                </div>
+
+                                <div class="third-content col-lg-4 col-md-4 col-sm-8 mb-5">
+                                    <h5 class="text__md mb-4"><b>Fast Implementation</b></h5>
+                                    <p class="text__sm">
+                                        Build amazing apps faster. Our API saves you months of
+                                        integration testing and support headache for you and your
+                                        customers.
+                                    </p>
+                                </div>
+
+                                <div class="third-content col-lg-4 col-md-4 col-sm-8 mb-5">
+                                    <h5 class="text__md mb-4"><b>Easy to use</b></h5>
+                                    <p class="text__sm">
+                                        Build amazing apps faster. Our API saves you months of
+                                        integration testing and support headache for you and your
+                                        customers.
+                                    </p>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="fourth__section w-100">
+                <div class="inner__third-section">
+                    <h2 class="text-center vert-text"><b>Available APIs</b></h2>
+                    <div class="d-flex top__content">
+                    </div>
+
+                    <section class="fourth__section-content w-100">
+                        <div class="row">
+                            <div class="first__row mt-5">
+                                <div class="row mb-5 first__set">
+                                    <% apis.forEach(data => { %>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 mb-5">
+                                            <div class="card text-center">
+                                                <div class="card-image">
+                                                    <img src="<%= data.img %> " alt="<%= data.name %> icon " />
+                                                </div>
+                                                <div class="card-body container">
+                                                    <h5 class="card-title text__md mb-4">
+                                                        <b><%= data.name %> </b>
+                                                    </h5>
+                                                    <p class="card-text mb-4">
+                                                        <%= data.desc %> 
+                                                    </p>
+    
+                                                </div>
+                                                <a href="<%= data.url %> " class="learn-more-btn" target="_blank">learn more</a>
+                                            </div>
+                                        </div>
+                                        
+                                   <% }); %> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <!-- include footer.ejs -->
+            <%- include('../templates/footer')-%>
+        </footer>
+    </article>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <script src="./js/homepage/home.js"></script>
+</body>
+
+</html>
