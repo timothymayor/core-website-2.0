@@ -2,22 +2,43 @@
 <html>
 
 <head>
-   <%- include('../templates/head') %>
-   <!-- Icons Css -->
-   <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
-   <!-- App Css-->
-   <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
-   <link rel='stylesheet' href='./stylesheets/style.css' />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MicroApi - APP API</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="./images/homepage/layers.png" type="image/x-icon" />
+
+    <!-- google font  -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+
+    <!-- font awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+
+    <!-- css link -->
+
+     <link href="./css/icons.min.css" rel="stylesheet" type="text/css" />
+     <!-- App Css-->
+     <link href="./css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/homepage/responsive.css" />
+    <link rel="stylesheet" href="./css/homepage/index.css" />
+    <link rel="stylesheet" href="./css/homepage/header.css" />
+    <link rel="stylesheet" href="./css/homepage/footer.css" />
 </head>
 
-<body data-topbar="dark">
+<body>
 
 
     <div id="layout-wrapper">
 
-        <header id="page-topbar">
+        <header>
             
-             <%- include('../templates/dashboard-header') %>
+            <%- include('../templates/header')-%>
 
         </header>
 
@@ -78,22 +99,12 @@
         
 
 
-          <footer class="footer" style="left: 0;">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-sm-6">
-                          <script>
-                              document.write(new Date().getFullYear())
-                          </script> © Micro API.
-                      </div>
-                      <div class="col-sm-6">
-                          <div class="text-sm-right d-none d-sm-block">
-                              Design & Develop by HNGi7
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </footer>
+          <!-- <footer class="footer" style="left: 0;"> -->
+              <footer>
+                  <!-- include footer.ejs -->
+                  <%- include('../templates/footer')-%>
+              </footer>
+          <!-- </footer> -->
     </div>
 
 

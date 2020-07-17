@@ -34,12 +34,6 @@ a:link{
   text-decoration: none;
 }
 
-li a:hover {
-  /* color: #ffffff; */
-  border-bottom: 2px solid #58BF8E;
-  padding-bottom: 0.5rem;
-  transition: .3s ease-in-out;
-}
 
 .burger {
   display: none;
