@@ -59,6 +59,9 @@ router.get('/', (req, res) => {
 
 // console.log(api);
 router.get('/login', (req, res) => {
+  if(req.session.auth) {
+      res.redirect('/dashboard');
+  }
   res.render('pages/login', {
     pageName: 'Login'
   });
@@ -73,5 +76,11 @@ router.get('/about', (req, res) => {
     pageName: 'about'
   });
 });
+
+router.get('/logout', (req, res) => {
+    req.session.auth = false;
+    req.session.email = null;
+    res.redirect('/');
+})
 
 module.exports = router;

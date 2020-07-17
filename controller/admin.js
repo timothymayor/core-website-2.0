@@ -104,7 +104,7 @@ exports.login = (req, res) => {
                     req.session.auth = true;
                     req.session.email = admin.email;
                     req.flash('success', 'Welcome back, You\'re logged in');
-                    res.redirect('/login');
+                    res.redirect('/dashboard');
                 }else {
                     req.flash('error', 'Invalid Password');
                     res.redirect('/login');
