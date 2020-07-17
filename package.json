@@ -26,5 +26,8 @@
     "nodemon": "^2.0.4",
     "routes": "^2.1.0",
     "validator": "^13.1.1"
-  }
+  },
+  "engines": {
+    "node": "12.x"
+ }
 }
