@@ -11,7 +11,7 @@ for (let data in api) {
 
 
 /* GET home page. */
-router.get('/dashboard', auth, function(req, res) {
+router.get('/dashboard', function(req, res) {
   res.render('pages/dashboard', {
     pageName: 'Dashbord',
     apis: api,
