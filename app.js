@@ -48,6 +48,6 @@ app.use(function(err, req, res, next) {
 });
 
 
-// app.listen(process.env.PORT || 2341, ()=>console.log("App Working"))
+app.listen(process.env.PORT || 2341, ()=>console.log("App Working"))
 
 module.exports = app;

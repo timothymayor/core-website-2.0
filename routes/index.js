@@ -40,7 +40,7 @@ router.get('/dashboard', auth, function(req, res) {
 });
 
 //Change this to the homepage or index
-router.get('/register-api', auth, (req, res) => {
+router.get('/register-api', (req, res) => {
 
   res.render('pages/addapi', {
     pageName: 'API Form'
