@@ -1,5 +1,5 @@
 module.exports = {
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 8000,
   host: process.env.HOST || 'localhost',
   dbPass: process.env.PASS || 'fullstackdb',
   dbname: process.env.NAME || 'fullstackdb',

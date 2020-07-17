@@ -4,6 +4,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 const session = require("express-session");
+const flash = require("express-flash");
 var logger = require('morgan');
 const adminRoute = require('./routes/admin');
 var indexRouter = require('./routes/index');
@@ -19,10 +20,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: 'f3e29360-dd0e-438c-80b8-b33c00ee6d8c',
   resave: false,
   saveUninitialized: true
 }));
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
@@ -44,7 +46,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.listen(process.env.PORT || 2340, ()=> console.log("App Running"));
 
 module.exports = app;
