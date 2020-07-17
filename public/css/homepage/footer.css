@@ -22,10 +22,14 @@ p {
 
 ul {
     list-style: none;
-    padding-left:40px
+  padding-left: 0px;
+}
+li{
+    padding: 0.3em 0em
 }
 
 a {
+font-size:15px;
     text-decoration: none;
 }
 
@@ -45,7 +49,6 @@ footer {
     font-size: 20px;
     line-height: 30px;
     text-align: left;
-    padding-left: 40px;
 }
 
 .work-footer a {
@@ -70,10 +73,20 @@ footer {
         line-height: 40px;
     }
 
+
    
 }
 
+@media (max-width: 991px) {
+         ul {
+            padding-left:40px
+      }
+      .work-footer p {
+    padding-left: 40px;
+    }
+}
 @media all and (min-width: 768px) {
+ 
     .collapse {
         margin-left: 78px;
     }
