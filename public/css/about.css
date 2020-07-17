@@ -20,44 +20,47 @@ p {
     margin-bottom: 0;
 }
 
+
+
+/* header */
 /* header */
 
-header {
+/* header {
   width: 100%;
   height: 5.7em;
   color: #ffffff;
   background: #010216;
   /* padding: .6em 0em; */
-}
+} */
 
-.navbar .inner__content {
+/* .navbar .inner__content {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100%;
-} 
-
+}  */
+/* 
 .navbar .nav__brand {
   
-}
+} */
 
-.navbar ul {
+/* .navbar ul {
   display: flex;
   align-items: center;
   list-style: none;
-  padding-left: 3.5rem;
+  /* padding-left: 3.5rem; */
   width: 100%;
-}
+} */
 
-.navbar .right {
+/* .navbar .right {
   justify-self:  right;
-}
+} */
 
-.navbar ul li {
+/* .navbar ul li {
   margin-left: 2rem;
-}
+} */
 
-.navbar li a, .btn-link {
+/* .navbar li a, .btn-link {
   color: #ffffff;
   font-family: Poppins;
   font-style: normal;
@@ -65,7 +68,7 @@ header {
   font-size: 1.2em;
   line-height: 50px;
   text-decoration: none;
-}
+} */
 
 .btn-link:hover {
   color: #58BF8E;
@@ -129,6 +132,8 @@ li a:hover {
   outline: none !important;
 }
 
+
+/* header */
 
 
 
@@ -256,7 +261,9 @@ body {
 .we_are {
     margin: 50px;
 }
-
+.section_story{
+    margin:10em 0
+}
 .title {
     font-family: Poppins;
     font-style: normal;
@@ -282,10 +289,11 @@ body {
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 36px;
     color: #141212;
     padding-top: 20px;
+    text-align:justify
 }
 
 .green {
@@ -348,7 +356,7 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 36px;
-    text-align: center;
+    text-align: justify;
     color: #141212;
 }
 
@@ -377,11 +385,11 @@ body {
 }
 
 .b2 {
-    padding-left: 75px;
+    padding-left: 105px;
 }
 
 .b3 {
-    margin-left: 80px;
+    margin-left: 100px;
 }
 
 .value_title {
@@ -413,6 +421,9 @@ img .value_image {
 }
 
 @media only screen and (max-width: 800px) {
+    .section_story{
+    margin:7em 0
+}
     .shift {
         margin: 50px;
         display: flex;
@@ -517,6 +528,9 @@ img .value_image {
         color: #141212;
         margin-top: 15px;
         padding-bottom: 10px;
+    }
+    .lead-row{
+        margin:1.5em 0
     }
     .lead_text {
         font-family: Poppins;
