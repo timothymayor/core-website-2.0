@@ -1,13 +1,9 @@
-const Admins = require('../models/admins');
-const { isEmpty, isEmail } = require('validator');
-const bcrypt = require('bcryptjs');
-
 exports.api = {
   row1 : [{ name: 'SMS',
   url:'https://sms.microapi.dev/',
   desc: 'All you need to do is have a senderID or userID. Once supplied, it would be used to identify all transactions done by you.',
   img: 'img/sms.png',
-  status: "pending",
+  status: "verified",
   id: "API234"
 },
 {
@@ -23,7 +19,7 @@ exports.api = {
   url: 'https://comment.microapi.dev',
   desc: 'Access to built-in functionalities for when they want to implement comments and replies within their own application.',
   img: 'img/comment.png',
-  status: "pending",
+  status: "unverified",
   id: "API224"
 },
 {
@@ -41,7 +37,7 @@ row2: [
     url: 'https://notification.microapi.dev',
     desc: 'This API allows you to send out notifications',
     img: 'img/bell.png',
-    status: "failed",
+    status: "unverified",
     id: "API204"
   },
   {
@@ -65,7 +61,7 @@ row2: [
     url: 'https://complaint.microapi.dev/v1/docs/',
     desc: 'A micro-service for managing complaints.',
     img: 'img/complain.png',
-    status: "pending",
+    status: "unverified",
     id: "API2340"
   },
 ],
@@ -80,44 +76,3 @@ row3: [
   }
 ]
 };
-
-// Admin Login 
-exports.login = (req, res) => {
-
-    const { email, password } = req.body;
-    if(isEmpty(email) || isEmpty(password)) {
-        req.flash('error', 'All fields are required');
-        res.redirect('/login');
-    }
-    if(!isEmail(email)) {
-        req.flash('error', 'Please enter a valid email');
-        res.redirect('/login');
-    }
-    
-    Admins.findOne({ email }).then(admin => {
-        if(!admin) {
-            req.flash('error', 'Email does not exist in our record');
-            res.redirect('/login');
-        }else{
-            bcrypt.compare(password, admin.password, (err, result) => {
-                if(result) {
-                    req.session.auth = true;
-                    req.session.email = admin.email;
-                    req.flash('success', 'Welcome back, You\'re logged in');
-                    res.redirect('/dashboard');
-                }else {
-                    req.flash('error', 'Invalid Password');
-                    res.redirect('/login');
-                }
-            })
-        }
-    }).catch(err => {
-        res.json("Errr")
-    })
-}
-
-exports.logout = (req, res) => {
-    req.session.auth = false;
-    req.session.email = null;
-    res.redirect('/');
-}

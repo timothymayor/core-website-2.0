@@ -94,6 +94,7 @@ a:visited {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  /* width: 100px; */
 }
 
 .api-status.verified {
