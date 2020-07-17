@@ -133,3 +133,8 @@ yarn.lock
 
 tmp/
 .DS_Store
+
+# dotenv
+.env
+.env.example
+
