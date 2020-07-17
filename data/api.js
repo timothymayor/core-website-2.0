@@ -54,7 +54,7 @@ exports.api = {
         url: 'https://auth.microapi.dev/api/doc/',
         desc: 'A Dockerized Microservice for Authentication',
         img: 'img/biometric.png',
-        status: "verified",
+        status: "failed",
         id: "API2114"
       },
       {
