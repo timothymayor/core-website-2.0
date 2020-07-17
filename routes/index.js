@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require("../middleware/auth");
 const {api} = require('../controller/admin');
 
 
@@ -10,7 +11,7 @@ for (let data in api) {
 
 
 /* GET home page. */
-router.get('/dashboard', function(req, res) {
+router.get('/dashboard', auth, function(req, res) {
   res.render('pages/dashboard', {
     pageName: 'Dashbord',
     apis: api,
@@ -58,6 +59,9 @@ router.get('/', (req, res) => {
 
 // console.log(api);
 router.get('/login', (req, res) => {
+  if(req.session.auth) {
+      res.redirect('/dashboard');
+  }
   res.render('pages/login', {
     pageName: 'Login'
   });
@@ -72,5 +76,11 @@ router.get('/about', (req, res) => {
     pageName: 'about'
   });
 });
+
+router.get('/logout', (req, res) => {
+    req.session.auth = false;
+    req.session.email = null;
+    res.redirect('/');
+})
 
 module.exports = router;
