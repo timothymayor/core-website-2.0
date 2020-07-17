@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: 'f3e29360-dd0e-438c-80b8-b33c00ee6d8c',
   resave: false,
   saveUninitialized: true
 }));
