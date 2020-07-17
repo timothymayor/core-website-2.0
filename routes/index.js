@@ -71,6 +71,11 @@ router.get('/blog', (req, res) => {
     pageName: 'blog'
   });
 });
+router.get('/contact', (req, res) => {
+  res.render('pages/contact', {
+    pageName: 'contact'
+  });
+});
 router.get('/about', (req, res) => {
   res.render('pages/about', {
     pageName: 'about'
