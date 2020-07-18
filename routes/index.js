@@ -72,10 +72,11 @@ router.post('/register-api', (req, res) => {
 })
 
 router.get('/', async (req, res) => {
-  var allApis = await apiModel.find({});
+  const approvedApis = await apiModel.find({ status: "approved" });
+  // var allApis = await apiModel.find({});
   res.render('pages/index', {
     pageName: 'Home',
-    apis: allApis
+    apis: approvedApis
   })
 });
 
