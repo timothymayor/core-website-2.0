@@ -28,8 +28,8 @@
             <p>Support</p>
             <ul>
                 <li><a href="https://github.com/microapidev/core-website-2.0">MicroApi GitHub</a></li>
-                <li><a href="/contact">Contact Us </a></li>
-                <!-- <li><a href="#">Help Center</a></li> -->
+                <li><a href="/contact">Contact Us </a></li> 
+                <!-- <li><a href="#">Help Center</a></li> --> 
             </ul>
             </div>
 
@@ -37,11 +37,11 @@
             <p>Products</p>
             <ul>
                  <li><a href="/about">About Us</a></li>
-                <li><a href="https://blog.microapi.dev" target="_blank">Blog</a></li>
+                <li><a href="/blog">Blog</a></li>
             </ul>
             </div>
 
-
+         
         </div>
         <div class="row bottom-footer mt-2">
             <p class="col-12 text-center pt-3"> All rights Reserved &copy;MicroApi</p>
