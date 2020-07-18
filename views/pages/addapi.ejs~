@@ -37,46 +37,37 @@
     <div id="layout-wrapper">
 
         <header>
-
+            
             <%- include('../templates/header')-%>
 
         </header>
 
-        <div class="main-content m-0 p-5">
+        <div class="main-content" style="margin-left: 0px;">
 
             <div class="page-content">
 
                 <div class="row">
 
                     <div class="col-lg-4 col-md-4 col-sm-8 form-container">
+
                         <h2 class="text-center">ADD API</h2>
-                        <form class="form api_form" method="POST" id="">
-                         <% if(messages.error){ %>
-                             <div class="alert alert-danger">
-                                 <%- messages.error %>
-                             </div>
-                         <% } %>
-                         <% if(messages.success){ %>
-                             <div class="alert alert-success">
-                                 <%- messages.success %>
-                             </div>
-                         <% } %>
-                            <div class="form-group row">
-                                <input type="email" name="owner" value="" data-selected="add_api"
-                                    class="form-control api" placeholder="API Owner Email" id="" autocomplete="off" required>
-                            </div>
+
+                        <form class="form api_form" name="add_api" id="">
+
                             <div class="form-group row">
                                 <input type="text" name="name" value="" data-selected="add_api"
                                     class="form-control api" placeholder="API Name" id="" autocomplete="off" required>
                             </div>
+
+
                              <div class="form-group row">
-                                 <input type="text" name="url" value="" data-selected="add_api"
+                                 <input type="url" name="url" value="" data-selected="add_api"
                                      class="form-control api" placeholder="API URL" id="" autocomplete="off" required>
                              </div>
 
                              <div class="form-group row">
-                                 <input type="text" name="img" value="" id="image-icon" data-selected="add_api" class="form-control api"
-                                     placeholder="API Image URL" autocomplete="off" required>
+                                 <input type="file" name="img" value="" id="image-icon" data-selected="add_api" class="form-control api"
+                                     placeholder="API Image" autocomplete="off" required>
                              </div>
 
 
@@ -86,7 +77,13 @@
                               </div>
 
                             <div class="form-group row">
-                            <button type="submit" class="btn btn-pry submit_now mx-auto btn-block">Add API</button>
+                            <button data-formname="add_api" data-method="POST" data-url="/mylink"
+                                class="btn btn-pry submit_now mx-auto btn-block" id="add_api_btn">Add API</button>
+                            <button class="btn btn-pry mx-auto loading hide_button btn-block" id="add_api_loader">
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            </button>
                         </div>
                         </form>
 
@@ -99,7 +96,7 @@
 
         </div>
 
-
+        
 
 
           <!-- <footer class="footer" style="left: 0;"> -->

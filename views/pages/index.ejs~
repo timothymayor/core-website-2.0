@@ -35,16 +35,7 @@
     </header>
 
     <article>
- <% if(messages.error){ %>
-     <div class="alert alert-danger">
-         <%- messages.error %>
-     </div>
- <% } %>
- <% if(messages.success){ %>
-     <div class="alert alert-success">
-         <%- messages.success %>
-     </div>
- <% } %>
+
         <!-- first section -->
         <section class="first__section container">
             <!-- <div class="inner__first-section"> -->
@@ -125,7 +116,7 @@
             <section class="apis mt-5">
                 <div class="container">
                     <h2 class="text-center vert-text"><b>Available APIs</b></h2>
-
+                    
 
                     <!-- <section class="fourth__section-conten"> -->
                         <!-- <div class="row"> -->
@@ -142,16 +133,16 @@
                                                         <b><%= data.name %> </b>
                                                     </h5>
                                                     <p class="card-text mb-4">
-                                                        <%= data.desc %>
+                                                        <%= data.desc %> 
                                                     </p>
-
+    
                                                 </div>
                                                 <a href="<%= data.url %> " class="learn-more-btn" target="_blank">learn more</a>
                                             </div>
                                         </div>
-
-                                   <% }); %>
-
+                                        
+                                   <% }); %> 
+                                    
                                 </div>
                             <!-- </div> -->
                         <!-- </div> -->
@@ -170,7 +161,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    
     <!-- <script src="./js/homepage/home.js"></script> -->
 </body>
 
