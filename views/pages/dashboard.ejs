@@ -500,7 +500,7 @@
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
                          </td>
                          <td>
-                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary">Approve</a>
+                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary <% list.status=='approved' ? 'd-none' : '' %>">Approve</a>
                          </td>
                          <td>
                            <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Disapprove</a>
@@ -547,12 +547,9 @@
                          </td>
                          <td>
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
-                         </td>
+                         </td>               
                          <td>
-                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary">Approve</a>
-                         </td>
-                         <td>
-                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Disapprove</a>
+                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Delete</a>
                          </td>
                        </tr>
                        <% }) %>
@@ -601,7 +598,7 @@
                            <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary">Approve</a>
                          </td>
                          <td>
-                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Disapprove</a>
+                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Delete</a>
                          </td>
                        </tr>
                        <% }) %>
