@@ -43,10 +43,7 @@ router.get('/register-api', (req, res) => {
   })
 });
 
-// router.post('/contact', (req, res) => {
-//     req.flash("success", "Thanks for contacting us...");
-//     res.redirect('/');
-// })
+
 router.post('/contact', (req, res) => {
     const { fname, email, comments } = req.body;
     const newComment = new commentMOdel({ fname, email, comments})
