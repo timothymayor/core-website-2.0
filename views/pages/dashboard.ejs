@@ -282,9 +282,9 @@
                              <label class="custom-control-label" for="customCheck1">&nbsp;</label>
                            </div>
                          </th> -->
-                         <th>API ID</th>
+                         <th>API Id</th>
                          <th>API Name</th>
-                         <th>API status</th>
+                         <th>Created On</th>
                          <th>Preview API</th>
                          <th>Verify API</th>
                        </tr>
@@ -304,7 +304,7 @@
                          <td><%= list.name %></td>
                          <td>
 
-                           <span class="api-status <%= list.status %> "><%= list.status %> </span>
+                           <%= list.createdon %> 
                          </td>
                          <td>
                            <a href="<%= list.url %>" class="btn btn-sm preview-api">preview</a>
