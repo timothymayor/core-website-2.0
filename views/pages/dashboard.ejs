@@ -54,7 +54,7 @@
 
        <div class="d-flex">
 
-         <div class="dropdown d-inline-block d-lg-none ml-2">
+         <!--<div class="dropdown d-inline-block d-lg-none ml-2">
            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <i class="mdi mdi-magnify"></i>
@@ -73,7 +73,7 @@
                </div>
              </form>
            </div>
-         </div>
+         </div>-->
 
          <!-- <div class="dropdown d-none d-lg-inline-block ml-1">
            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
@@ -500,10 +500,10 @@
                            <a href="<%= list.url %>" class="btn preview-api">preview</a>
                          </td>
                          <td>
-                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary <% list.status=='approved' ? 'd-none' : '' %>">Approve</a>
+                           <a href="/approve-api?api=<%= list.name %>" class="btn btn-primary <% list.status=='approved' ? 'disabled' : '' %>">Approve</a>
                          </td>
                          <td>
-                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Disapprove</a>
+                           <a href="/delete-api?api=<%= list.name %>" class="btn btn-danger">Delete</a>
                          </td>
                        </tr>
                        <% }) %>
