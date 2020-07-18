@@ -122,19 +122,20 @@
                 </div>
             </section>
 
-            <section class="mt-5">
-                <div class="">
+            <section class="apis mt-5">
+                <div class="container">
                     <h2 class="text-center vert-text"><b>Available APIs</b></h2>
+
+
                     <!-- <section class="fourth__section-conten"> -->
                         <!-- <div class="row"> -->
                             <!-- <div class="first__row mt-5"> -->
-                                <div class="row mt-5 no-gutters">
-                                <div class="">
+                                <div class="row mt-5 avail">
                                     <% apis.forEach(data => { %>
-                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-                                            <div class="p-3 py-5 bg-white m-3 text-center">
+                                        <div class="col-lg-4 col-md-6 col-sm-10 mb-5 ">
+                                            <div class="card text-center ">
                                                 <div class="card-image">
-                                                    <img src="<%= data.img %>" alt="<%= data.name %> icon" />
+                                                    <img src="<%= data.img %> " alt="<%= data.name %> icon " />
                                                 </div>
                                                 <div class="card-body container">
                                                     <h5 class="card-title text__md mb-4">
@@ -145,12 +146,12 @@
                                                     </p>
 
                                                 </div>
-                                                <a href="<%= data.url %>" class="btn btn-info w-50" target="_blank">learn more</a>
+                                                <a href="<%= data.url %> " class="learn-more-btn" target="_blank">learn more</a>
                                             </div>
                                         </div>
 
                                    <% }); %>
-                                    </div>
+
                                 </div>
                             <!-- </div> -->
                         <!-- </div> -->
