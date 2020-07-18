@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require("../middleware/auth");
 const { isEmpty } = require('validator');
 const apiModel = require("../models/api");
+const commentMOdel = require("../models/contactform")
 
 /* GET home page. */
 router.get('/dashboard', auth, async function(req, res) {
@@ -42,9 +43,19 @@ router.get('/register-api', (req, res) => {
   })
 });
 
+
 router.post('/contact', (req, res) => {
-    req.flash("success", "Thanks for contacting us...");
-    res.redirect('/');
+    const { fname, email, comments } = req.body;
+    const newComment = new commentMOdel({ fname, email, comments})
+    newComment.save().then( () => {
+      req.flash("success", "Thanks for contacting us...");
+      res.redirect('/');
+    }).catch(err => {
+      console.log(err)
+          req.flash("error", "comment not saved please try again");
+          res.redirect('/contact');
+      })
+    
 })
 
 router.post('/register-api', (req, res) => {
@@ -61,10 +72,11 @@ router.post('/register-api', (req, res) => {
 })
 
 router.get('/', async (req, res) => {
-  var allApis = await apiModel.find({});
+  const approvedApis = await apiModel.find({ status: "approved" });
+  // var allApis = await apiModel.find({});
   res.render('pages/index', {
     pageName: 'Home',
-    apis: allApis
+    apis: approvedApis
   })
 });
 
